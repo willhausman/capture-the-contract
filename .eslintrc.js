@@ -10,7 +10,6 @@ module.exports = {
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
-    'plugin:jsx-a11y/recommended',
   ],
   settings: {
     react: {
@@ -33,7 +32,10 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint'],
   rules: {
+    'max-len': 'off',
+    'no-console': 'off',
     'no-unused-vars': 'off',
+    'react/require-default-props': 'off',
     '@typescript-eslint/no-unused-vars': ['error'],
     'react/jsx-filename-extension': [
       'warn',
@@ -51,7 +53,7 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'import/extensions': ['error', 'never'],
     'no-shadow': 'off',
-    '@typescript-eslint/no-shadow': ['error'],
+    '@typescript-eslint/no-shadow': ['off'],
     'array-element-newline': ['error', { multiline: true, minItems: 4 }], // 3 items can be inline, then must be per line
     'array-bracket-newline': ['error', { multiline: true }], // first item in array starts on new line
     '@typescript-eslint/no-explicit-any': 'off',
